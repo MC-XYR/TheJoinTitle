@@ -1,0 +1,35 @@
+#TheJoinTitle配置文件
+#支持格式化代码（颜色代码）
+#各个配置的等级specific＞specificall＞all
+
+
+#这个是语言默认zh_cn，语言文件可以自定义，安装只需把语言文件直接放到language文件夹然后在config.yml中切换。原本的zh_cn和en_us不用动。别的语言的翻译可以交给ai。
+language: zh_cn
+
+
+#这里是加入后自定义提示消息，消息示例：更新公告：移除了herobrine
+#all是是否更改全部玩家的加入消息；on打开off关闭；默认off
+all:
+  enabled: off
+  message: "更新公告：移除了herobrine"
+
+
+#这个是给特定玩家的自定义提示消息开关
+#下面的是自定义提示消息的玩家；示例herobrine和notch
+#这个是 没办法 单独设置 特定玩家 特定加入消息 的
+specificall:
+  enabled: off
+  message: "更新公告：移除了herobrine"
+  players:
+    - herobrine
+    - notch
+
+
+#这个是给特定玩家的自定义提示消息开关
+#下面的是自定义提示消息的玩家；示例dog和MC_XYR
+#这个是 可以 单独设置 特定玩家 特定加入消息 的；格式："玩家名:自定义提示消息"
+specific:
+  enabled: off
+  players:
+    - "dog:&c汪汪汪"
+    - "MC_XYR:我是作者，我添加了114514个高危漏洞[doge]"

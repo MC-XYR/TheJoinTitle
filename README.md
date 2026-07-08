@@ -4,11 +4,18 @@
 
 ## 功能
 
-- 自定义全体玩家加入消息
-- 自定义特定玩家加入消息（统一消息）
-- 自定义特定玩家加入消息（每人单独消息）
-- 游戏内指令添加/移除/开关
-- 多语言支持，可自定义语言文件
+- 自定义全体玩家加入消息（all）
+- 自定义特定玩家统一加入消息（specificall）
+- 自定义特定玩家单独加入消息（specific）
+- 优先级：specific > specificall > all
+- 游戏内指令动态增删改查
+- 多语言支持，自由扩展语言文件
+- 支持 `&`和`§` 颜色代码
+
+## 安装
+- 下载 jar 放入 `plugins/` 文件夹
+- 重启服务器
+- 编辑 `plugins/TheJoinTitle/config.yml` 配置
 
 ## 指令
 
@@ -16,8 +23,11 @@
 |------|------|
 | `/thejointitle add <玩家> <消息>` | 添加特定玩家的加入消息 |
 | `/thejointitle remove <玩家>` | 移除特定玩家的加入消息 |
+| `/thejointitle edit <玩家> <新消息>` | 修改特定玩家的加入消息 |
 | `/thejointitle toggle <all\|specificall\|specific>` | 开关对应功能 |
+| `/thejointitle set <all\|specificall\|specific> <enabled\|message> <值>` | 修改配置项 |
 | `/thejointitle language <语言代码>` | 切换语言 |
+| `/thejointitle reload` | 重载配置和语言文件 |
 | `/thejointitle about` | 查看插件信息 |
 
 别名：`/tjt`、`/jointitle`、`/玩家加入标题`

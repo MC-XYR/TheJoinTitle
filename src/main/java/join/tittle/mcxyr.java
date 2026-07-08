@@ -21,6 +21,7 @@ public final class mcxyr extends JavaPlugin implements Listener {
         loadLang();
         getServer().getPluginManager().registerEvents(this, this);
         getCommand("thejointitle").setExecutor(new TheJoinTitleCommand(this));
+        getCommand("thejointitle").setTabCompleter(new TheJoinTitleTabCompleter());
     }
 
     @Override

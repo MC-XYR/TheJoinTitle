@@ -1,4 +1,6 @@
 package join.tittle;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +17,12 @@ public class TheJoinTitleCommand implements CommandExecutor {
     }
 
     @Override
+
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (!sender.hasPermission("thejointitle.use")) {
+            sender.sendMessage(plugin.getLang("no_permission"));
+            return true;
+        }
         if (args.length == 0) {
             sender.sendMessage(plugin.getLang("command_usage"));
             return true;
@@ -174,11 +181,48 @@ public class TheJoinTitleCommand implements CommandExecutor {
                 sender.sendMessage(plugin.getLang("language_switched").replace("{lang}", newLang));
                 return true;
 
+            case "grant":
+                if (!sender.hasPermission("thejointitle.admin")) {
+                    sender.sendMessage(plugin.getLang("no_permission"));
+                    return true;
+                }
+                if (args.length < 2) {
+                    sender.sendMessage("§c用法: /thejointitle grant <玩家名>");
+                    return true;
+                }
+                Player grantPlayer = Bukkit.getPlayer(args[1]);
+                if (grantPlayer == null) {
+                    sender.sendMessage("§c玩家不在线");
+                    return true;
+                }
+                grantPlayer.addAttachment(plugin, "thejointitle.use", true);
+                sender.sendMessage("§a已授予 " + args[1] + " 使用权限");
+                return true;
+
+            case "revoke":
+                if (!sender.hasPermission("thejointitle.admin")) {
+                    sender.sendMessage(plugin.getLang("no_permission"));
+                    return true;
+                }
+                if (args.length < 2) {
+                    sender.sendMessage("§c用法: /thejointitle revoke <玩家名>");
+                    return true;
+                }
+                Player revokePlayer = Bukkit.getPlayer(args[1]);
+                if (revokePlayer == null) {
+                    sender.sendMessage("§c玩家不在线");
+                    return true;
+                }
+                revokePlayer.addAttachment(plugin, "thejointitle.use", false);
+                sender.sendMessage("§a已撤销 " + args[1] + " 的使用权限");
+                return true;
+
             case "reload":
                 plugin.reloadPluginConfig();
                 plugin.reloadLang();
                 sender.sendMessage(plugin.getLang("reload_success"));
                 return true;
+
 
             case "about":
                 sender.sendMessage("§6TheJoinTitle v1.0");

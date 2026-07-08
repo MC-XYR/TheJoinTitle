@@ -12,3 +12,10 @@ commands:
       - tjt
       - jointitle
       - 玩家加入标题
+permissions:
+  thejointitle.admin:
+    description: TheJoinTitle管理员权限
+    default: op
+  thejointitle.use:
+    description: TheJoinTitle使用权限
+    default: false

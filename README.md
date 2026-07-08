@@ -63,7 +63,6 @@ specificall:
     - herobrine
     - notch
 
-
 #这个是给特定玩家的自定义提示消息开关
 #下面的是自定义提示消息的玩家；示例dog和MC_XYR
 #这个是 可以 单独设置 特定玩家 特定加入消息 的；格式："玩家名:自定义提示消息"
@@ -72,3 +71,12 @@ specific:
   players:
     - "dog:&c汪汪汪"
     - "MC_XYR:我是作者，我添加了114514个高危漏洞[doge]"
+
+
+---
+# 作者
+MC_XYR
+QQ: 3365671772
+---
+#开源协议
+本项目采用 GNU General Public License v3.0 (GPL v3) 开源协议。详细信息请参阅 LICENSE 文件。

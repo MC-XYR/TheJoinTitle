@@ -71,8 +71,7 @@ specific:
   players:
     - "dog:&c汪汪汪"
     - "MC_XYR:我是作者，我添加了114514个高危漏洞[doge]"
-
-
+```
 ---
 # 作者
 MC_XYR

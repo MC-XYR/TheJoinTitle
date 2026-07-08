@@ -11,6 +11,7 @@
 - 游戏内指令动态增删改查
 - 多语言支持，自由扩展语言文件
 - 支持 `&`和`§` 颜色代码
+- 管理员可指定他人权限
 
 ## 安装
 - 下载 jar 放入 `plugins/` 文件夹
@@ -19,18 +20,24 @@
 
 ## 指令
 
-| 指令 | 说明 |
-|------|------|
-| `/thejointitle add <玩家> <消息>` | 添加特定玩家的加入消息 |
-| `/thejointitle remove <玩家>` | 移除特定玩家的加入消息 |
-| `/thejointitle edit <玩家> <新消息>` | 修改特定玩家的加入消息 |
-| `/thejointitle toggle <all\|specificall\|specific>` | 开关对应功能 |
-| `/thejointitle set <all\|specificall\|specific> <enabled\|message> <值>` | 修改配置项 |
-| `/thejointitle language <语言代码>` | 切换语言 |
-| `/thejointitle reload` | 重载配置和语言文件 |
-| `/thejointitle about` | 查看插件信息 |
+| 指令 | 说明 | 权限 |
+|------|------|------|
+| `/thejointitle add <玩家> <消息>` | 添加特定玩家的加入消息 | thejointitle.use |
+| `/thejointitle remove <玩家>` | 移除特定玩家的加入消息 | thejointitle.use |
+| `/thejointitle edit <玩家> <新消息>` | 修改特定玩家的加入消息 | thejointitle.use |
+| `/thejointitle toggle <all\|specificall\|specific>` | 开关对应功能 | thejointitle.use |
+| `/thejointitle set <all\|specificall\|specific> <enabled\|message> <值>` | 修改配置项 | thejointitle.use |
+| `/thejointitle language <语言代码>` | 切换语言 | thejointitle.use |
+| `/thejointitle reload` | 重载配置和语言文件 | thejointitle.use |
+| `/thejointitle grant <玩家>` | 授予玩家使用权限 | thejointitle.admin |
+| `/thejointitle revoke <玩家>` | 撤销玩家使用权限 | thejointitle.admin |
+| `/thejointitle about` | 查看插件信息 | thejointitle.use |
 
 别名：`/tjt`、`/jointitle`、`/玩家加入标题`
+
+**权限节点：**
+- `thejointitle.admin` — 管理员权限，OP 默认拥有
+- `thejointitle.use` — 使用权限，需管理员通过 `/thejointitle grant` 授予
 
 ## 配置文件
 

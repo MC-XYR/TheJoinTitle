@@ -73,10 +73,12 @@ specific:
     - "MC_XYR:我是作者，我添加了114514个高危漏洞[doge]"
 ```
 ---
+
 # 作者
--
-MC_XYR
+MC_XYR  
 QQ: 3365671772
+
 ---
+
 # 开源协议
 本项目采用 GNU General Public License v3.0 (GPL v3) 开源协议。详细信息请参阅 LICENSE 文件。

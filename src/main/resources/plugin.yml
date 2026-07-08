@@ -1,6 +1,14 @@
 name: TheJoinTitle
 version: '${version}'
 
-main: join.tittle
+main: join.tittle.mcxyr
 api-version: '1.21.11'
 load: POSTWORLD
+commands:
+  thejointitle:
+    description: 这是一个关于玩家加入事件的minecraft游戏插件。
+    usage: /thejointitle <方法>
+    aliases:
+      - tjt
+      - jointitle
+      - 玩家加入标题

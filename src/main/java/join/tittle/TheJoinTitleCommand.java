@@ -225,7 +225,7 @@ public class TheJoinTitleCommand implements CommandExecutor {
 
 
             case "about":
-                sender.sendMessage("§6TheJoinTitle v1.0");
+                sender.sendMessage("§6TheJoinTitle v1.3");
                 sender.sendMessage("§e作者: MC_XYR");
                 sender.sendMessage(plugin.getLang("about_translator"));
                 return true;

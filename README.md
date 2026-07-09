@@ -1,6 +1,7 @@
 # TheJoinTitle
 
 自定义玩家加入消息的 Minecraft Paper 插件，支持 1.21.11。
+部分代码由deepseek生成，维护由MC_XYR维护。
 
 ## 功能
 
@@ -12,6 +13,11 @@
 - 多语言支持，自由扩展语言文件
 - 支持 `&`和`§` 颜色代码
 - 管理员可指定他人权限
+
+## 前置
+
+- **[必需]** Paper 1.21.11+ 理论可以向下兼容到1.8，但未经测试不保证稳定性以及安全性。
+- **[可选]** [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)2.11.0+  — 安装后可解析 PAPI 变量。
 
 ## 安装
 - 下载 jar 放入 `plugins/` 文件夹
